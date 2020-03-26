@@ -37,7 +37,7 @@ for ind in nat_indicies:
     
 
 # Corona Data
-datafile_covid = 'https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide.xlsx'
+datafile_covid = 'https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-{}.xlsx'.format(dtdate.today())
 df = pd.read_excel(datafile_covid, names = ['Date', 'Day', 'Month', 'Year','Cases','Deaths','Country','ID','Pop'], skiprows = 1)
 
 datafile_coords = 'CountryCoords.csv'
